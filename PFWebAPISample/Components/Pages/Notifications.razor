@@ -1,6 +1,98 @@
 ﻿@page "/notifications"
-<h3>Notifications</h3>
+<h3>NOTIFICATIONS</h3>
+<div class="tabs">
+    <button id="btnView" @onclick="ShowAll">View All </button>
+    <button id="btnMentions" @onclick="ShowMentions">Mentions</button>
+    <button id="btnMessage" @onclick="ShowMessages">Messages</button>
+</div>
+<div class="NotificationPage">
+    <div class="Mentions" hidden="@(!showMentions)">
+        <img class="DP" src="https://cdn.dribbble.com/userupload/4145161/file/still-6192bd58cb864188b6fe14acf33c36a8.png?resize=2000x1500" />
+        <b>Willie</b> mentioned you on a post.
+        <button>See Post</button>
+    </div>
+    <div class="Messages" hidden="@(!showMessages)">
+        <img class="DP" src="https://tse1.explicit.bing.net/th/id/OIP.FhWHAG-6VMAKd-AzsxTjGgHaJP?rs=1&pid=ImgDetMain" />
+        <b>Sandra</b> sent you a message.
+        <button class="btnReply">Reply</button>
+    </div>
+    <div class="Messages" hidden="@(!showMessages)">
+        <img class="DP" src=https://tse3.mm.bing.net/th/id/OIP.K5GxOqUVvrLC-JIyF3bC_wHaHa?rs =1&pid =ImgDetMain />
+        <b>Patty</b> sent you a message.
+        <button class="btnReply">Reply</button>
+    </div>
+</div>
 
 @code {
+    bool showMessages = true;
+    bool showMentions = true;
+    void ShowAll()
+    {
+        showMessages = true;
+        showMentions = true;
+
+    }
+    void ShowMessages()
+    {
+        showMessages = true;
+        showMentions = false;
+
+    }
+    void ShowMentions()
+    {
+        showMessages = false;
+        showMentions = true;
+
+    }
 
 }
+
+<style>
+    h3 {
+        text-align: center;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+    }
+
+    body {
+        background: #BFF4FF;
+    }
+
+    button {
+        transition-duration: 0.4s;
+        background-color: white;
+        border: 1px solid #FF8FB1;
+    }
+
+        button:hover {
+            background-color: #FF8FB1;
+            color: white;
+        }
+
+    .tabs {
+        margin: 10px;
+    }
+
+    .DP {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 1px solid black;
+        margin: 5px
+    }
+
+    .Mentions {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid grey;
+        background: #FFF1F5;
+    }
+
+    .Messages {
+        margin: 5px;
+        padding: 10px;
+        border: 1px solid grey;
+        background: #FFF1F5;
+    }
+
+</style>
