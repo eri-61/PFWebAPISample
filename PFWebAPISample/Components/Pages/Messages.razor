@@ -1,6 +1,68 @@
 ﻿@page "/messages"
-<h3>Messages</h3>
 
+<div class="d-flex justify-content-between w-100 h-100 p-3" style="background-color: #F1ACFA; color:white;">
+    <div>
+        <span><i class="fa fa-user-circle fa-lg" /></span>
+        <span>User Name</span>
+    </div>
+    <span><i class="fa fa-info-circle fa-lg" /></span>
+</div>
+<div class="w-100 h-100 p-5" style="background: #ffa1cd; background: linear-gradient(90deg, rgba(255, 161, 205, 1) 0%, rgba(236, 172, 252, 1) 50%, rgba(228, 173, 255, 1) 100%);">
+    <ul class="list-unstyled">
+        <li class="d-flex justify-content-between mb-4">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" alt="avatar"
+                 class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+            <div class="card" style="background-color: #E67D9D;">
+                <div class="card-header p-3">
+                    <p class="fw-bold mb-0">Brad Pitt</p>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </li>
+        <li class="d-flex justify-content-between mb-4">
+            <div class="card w-100" style="background-color: #F3BFCB;">
+                <div class="card-header p-3">
+                    <p class="fw-bold mb-0">Lara Croft</p>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
+                        laudantium.
+                    </p>
+                </div>
+            </div>
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-5.webp" alt="avatar"
+                 class="rounded-circle d-flex align-self-start ms-3 shadow-1-strong" width="60">
+        </li>
+        <li class="d-flex justify-content-between mb-4">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp" alt="avatar"
+                 class="rounded-circle d-flex align-self-start me-3 shadow-1-strong" width="60">
+            <div class="card" style="background-color: #E67D9D;">
+                <div class="card-header d-flex justify-content-between p-3">
+                    <p class="fw-bold mb-0">Brad Pitt</p>
+                    <p class="text-muted small mb-0"><i class="far fa-clock"></i> 10 mins ago</p>
+                </div>
+                <div class="card-body">
+                    <p class="mb-0">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua.
+                    </p>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+<div>
+    <div data-mdb-input-init class="form-outline">
+        <input type="email" class="form-control w-100" id="exampleFormControlInput1">
+    </div>
+    <button type="button" class="btn btn-info btn-rounded float-end" style="background-color: #E67D9D;">Send</button>
+</div>
 @code {
 
 }
