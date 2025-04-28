@@ -1,22 +1,16 @@
-﻿@page "/calendar"
+﻿@inject IJSRuntime jsRT
+@page "/calendar"
 <h3>Calendar</h3>
- <div id='calendar'></div>
-
-<script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.17/index.global.min.js'></script>
+<div id='calendar'></div>
 <script>
+        window.loadCalendar();
+</script>
+@code{
 
-    //On Page Load
-    $(function(){
-        loadCalendar();
-    });
 
-    function loadCalendar(){
-        var calendarEl = document.getElementById('calendar');
-        var calendar = new FullCalendar.Calendar(calendarEl, {
-          initialView: 'dayGridMonth'
-        });
-        calendar.render();
+    protected override async void OnInitialized()
+    {
+        await jsRT.InvokeVoidAsync("loadCalendar");
     }
 
-    loadCalendar();
-</script>
+}
